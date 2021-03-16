@@ -1,8 +1,10 @@
 ﻿@page  "/GrillaTablas"
+@using DataFlex.Shared
 
+<RadzenGrid Count="@count" Data="@xTable" LoadData="@LoadData" AllowSorting="true" AllowFiltering="true" AllowPaging="true" PageSize="4" TItem="Table" ColumnWidth="200px">
+    <Columns>
+        <RadzenGridColumn TItem="Table" Property="Name" Title="Nombre Tabla" />
+        <RadzenGridColumn TItem="Table" Property="id" Title="Tabla id" Sortable="false" Filterable="false"/>
 
-<h1>Grilla de tablas</h1>
-
-
-
-}
+    </Columns>
+</RadzenGrid>

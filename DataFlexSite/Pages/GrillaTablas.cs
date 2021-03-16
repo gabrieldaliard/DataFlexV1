@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using DataFlexSite.Services;
 using Microsoft.AspNetCore.Components;
 using DataFlex.Shared;
-
+using Radzen;
 
 namespace DataFlexSite.Pages
 {
@@ -18,14 +18,24 @@ namespace DataFlexSite.Pages
 
         IEnumerable<Table> xTable;
 
+
         protected override async Task OnInitializedAsync()
         {
-
-            xTable = await(TableDataServicex.GetAllTables());
+            
+            //xTable = await(TableDataServicex.GetAllTables());
 
         }
-			//return base.OnInitializedAsync();
-		
+        //return base.OnInitializedAsync();
 
+        int count;
+
+        async Task LoadData(LoadDataArgs args)
+        {
+            xTable = await (TableDataServicex.GetAllTables());
+
+            count = xTable.Count();
+
+            await InvokeAsync(StateHasChanged);
+        }
     }
 }

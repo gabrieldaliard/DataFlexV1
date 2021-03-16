@@ -80,7 +80,7 @@ namespace DataFlex.Api
 
             app.UseAuthorization();
 
-            //app.UseCors("Open");
+            app.UseCors("Open");
 
             app.UseEndpoints(endpoints =>
             {
