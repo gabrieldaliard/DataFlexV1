@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataFlex.Api", "DataFlex.Ap
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataFlex.Shared", "DataFlex.Shared\DataFlex.Shared.csproj", "{A954366C-38DA-460D-AC47-3A8F3D5F1D75}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataFlexSite", "DataFlexSite\DataFlexSite.csproj", "{F74C59C5-6351-4AAA-A8B5-3EC98D5CA0A1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataFlexSite", "DataFlexSite\DataFlexSite.csproj", "{F74C59C5-6351-4AAA-A8B5-3EC98D5CA0A1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

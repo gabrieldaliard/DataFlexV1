@@ -1,4 +1,6 @@
 ﻿@page "/counter"
+@inject DialogService DialogServicex
+@inject NotificationService noti
 
 <h1>Counter</h1>
 
@@ -6,11 +8,33 @@
 
 <button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
 
+<RadzenButton Text="Show confirm dialog" Click=ButtonClicked />
+
+
+
+
 @code {
     private int currentCount = 0;
-
+    string text = "Dialogo!";
     private void IncrementCount()
     {
         currentCount++;
     }
+    private void ButtonClicked()
+    {
+        //DialogServicex.Confirm("Are you sure?", "MyTitle", new ConfirmOptions() { OkButtonText = "Yes", CancelButtonText = "No" });
+        DialogServicex.Open<FetchData>("Datos!!", null, null);
+    }
+
+    protected override void OnInitialized()
+    {
+        DialogServicex.OnClose += Close;
+    }
+
+    void Close(dynamic result)
+    {
+        //DialogServicex.Open($"Dialog closed with result: {result}",null, null);
+
+    }
+
 }

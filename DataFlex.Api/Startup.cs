@@ -54,10 +54,10 @@ namespace DataFlex.Api
 
             services.AddScoped<ITableRepository, TableRepository>();
 
-            //services.AddCors(options =>
-            //{
-            //    options.AddPolicy("Open", builder => builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
-            //});
+            services.AddCors(options =>
+            {
+                options.AddPolicy("Open", builder => builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
+            });
 
             services.AddControllers();
 
